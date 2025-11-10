@@ -1,0 +1,4 @@
+- [x] Alterar o estilo inline da imagem em index.html de max-width: 600px para max-width: 100%
+- [x] Alterar o estilo inline da imagem em sobre.html de max-width: 600px para max-width: 100%
+- [x] Alterar o estilo inline da imagem em servicos.html de max-width: 600px para max-width: 100%
+- [x] Verificar as mudanças abrindo as páginas no navegador

@@ -1,7 +1,5 @@
-- [x] Criar sobre.html com header, seção Sobre e footer contato
-- [x] Criar servicos.html com header, seção Serviços e footer contato
-- [x] Criar passeios.html com header, seção Passeios e footer contato
-- [x] Criar frota.html com header, seção Frota e footer contato
-- [x] Atualizar index.html para apenas seção Início, header e footer contato
-- [x] Atualizar styles.css com cores vermelho, preto e branco
-- [x] Testar navegação entre páginas
+# TODO: Redimensionar imagens para largura total e responsivo
+
+- [x] Editar index.html: Remover max-width da imagem na seção início
+- [x] Editar sobre.html: Remover max-width da imagem na seção sobre
+- [x] Editar servicos.html: Remover max-width da imagem na seção serviços

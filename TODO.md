@@ -1,4 +1,5 @@
-- [x] Alterar o estilo inline da imagem em index.html de max-width: 600px para max-width: 100%
-- [x] Alterar o estilo inline da imagem em sobre.html de max-width: 600px para max-width: 100%
-- [x] Alterar o estilo inline da imagem em servicos.html de max-width: 600px para max-width: 100%
-- [x] Verificar as mudanças abrindo as páginas no navegador
+# TODO: Redimensionar imagens para largura total e responsivo
+
+- [x] Editar index.html: Remover max-width da imagem na seção início
+- [x] Editar sobre.html: Remover max-width da imagem na seção sobre
+- [x] Editar servicos.html: Remover max-width da imagem na seção serviços

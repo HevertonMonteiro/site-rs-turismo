@@ -1,4 +1,4 @@
-// Script para validação e envio do formulário de contato
+// Script para validação e envio do formulário de contato usando Web3Forms
 document.getElementById('contatoForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -27,12 +27,41 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
         return;
     }
 
-    // Enviar formulário usando FormSubmit
-    this.submit();
+    // Preparar dados para Web3Forms
+    const formData = new FormData();
+    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Substitua pela sua chave do Web3Forms
+    formData.append('name', nome);
+    formData.append('email', email);
+    formData.append('telefone', telefone);
+    formData.append('message', mensagem);
 
-    // Após envio, exibir mensagem e limpar formulário
-    setTimeout(function() {
-        alert('Mensagem enviada com sucesso!');
-        document.getElementById('contatoForm').reset();
-    }, 1000); // Pequeno delay para garantir que o envio iniciou
+    // Enviar dados via fetch para Web3Forms
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Exibir mensagem de sucesso no site
+            const successMessage = document.createElement('div');
+            successMessage.textContent = 'Sua mensagem foi enviada com sucesso! Em breve retornaremos.';
+            successMessage.style.cssText = 'color: green; font-weight: bold; margin-top: 1rem; text-align: center;';
+            document.getElementById('contatoForm').appendChild(successMessage);
+
+            // Limpar formulário
+            document.getElementById('contatoForm').reset();
+
+            // Remover mensagem após 5 segundos
+            setTimeout(() => {
+                successMessage.remove();
+            }, 5000);
+        } else {
+            alert('Erro ao enviar a mensagem. Tente novamente.');
+        }
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert('Erro ao enviar a mensagem. Tente novamente.');
+    });
 });

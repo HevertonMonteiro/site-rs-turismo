@@ -28,12 +28,7 @@ document.getElementById('contatoForm').addEventListener('submit', function(event
     }
 
     // Preparar dados para Web3Forms
-    const formData = new FormData();
-    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Substitua pela sua chave do Web3Forms
-    formData.append('name', nome);
-    formData.append('email', email);
-    formData.append('telefone', telefone);
-    formData.append('message', mensagem);
+    const formData = new FormData(document.getElementById('contatoForm'));
 
     // Enviar dados via fetch para Web3Forms
     fetch('https://api.web3forms.com/submit', {

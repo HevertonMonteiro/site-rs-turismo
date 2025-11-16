@@ -1,5 +1,5 @@
 // Script para validação e envio do formulário de contato
-document.getElementById('contato-form').addEventListener('submit', function(event) {
+document.getElementById('contatoForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const nome = document.getElementById('nome').value.trim();
@@ -27,9 +27,12 @@ document.getElementById('contato-form').addEventListener('submit', function(even
         return;
     }
 
-    // Simulação de envio (substitua por lógica real de envio)
-    alert(`Obrigado pelo contato, ${nome}! Recebemos sua mensagem e entraremos em contato em breve.`);
+    // Enviar formulário usando FormSubmit
+    this.submit();
 
-    // Limpar formulário
-    this.reset();
+    // Após envio, exibir mensagem e limpar formulário
+    setTimeout(function() {
+        alert('Mensagem enviada com sucesso!');
+        document.getElementById('contatoForm').reset();
+    }, 1000); // Pequeno delay para garantir que o envio iniciou
 });

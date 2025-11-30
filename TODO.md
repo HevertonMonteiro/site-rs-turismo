@@ -1,4 +1,4 @@
-# TODO - Reestruturação Completa do Site RS TURISMO
+me# TODO - Reestruturação Completa do Site RS TURISMO
 
 ## Tarefas Pendentes
 - [x] Reescrever index.html do zero com estrutura semântica HTML5, incluindo todas as seções (navbar, hero, sobre, serviços, galeria da frota, depoimentos, cidades, orçamento, contato, rodapé), meta tags SEO, Open Graph e favicon.

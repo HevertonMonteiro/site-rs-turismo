@@ -1,3 +1,14 @@
+// Script para toggle do menu hamburger
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+});
+
 // Script para validação e envio do formulário de contato usando Web3Forms
 document.getElementById('contatoForm').addEventListener('submit', function(event) {
     event.preventDefault();
